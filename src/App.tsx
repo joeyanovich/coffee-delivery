@@ -3,7 +3,6 @@ import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./styles/global";
 import { defaultTheme } from "./styles/theme/default";
 import { Router } from './Router';
-// import { Header } from "./Header";
 
 export function App() {
 
