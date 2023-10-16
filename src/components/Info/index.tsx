@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { InfoContainer } from "./styles";
+// import { defaultTheme } from "../../styles/theme/default";
 import { defaultTheme } from "../../styles/theme/default";
 
 interface InfoProps {
