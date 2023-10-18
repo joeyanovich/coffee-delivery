@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import bg from '../../../public/bg-hero.png'
 import bg from '../../../../../public/bg-hero.png'
 
 export const BannerContainer = styled.main`
@@ -57,6 +56,11 @@ export const BannerContainer = styled.main`
   }
 
   @media (max-width: 50rem) {
+    display: flex;
+    justify-content: center;
+
+    min-height: 25rem;
+
     .container {
       padding: 0;
     }

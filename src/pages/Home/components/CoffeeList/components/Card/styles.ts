@@ -4,7 +4,8 @@ export const CardContainer = styled.div`
   width: 16rem;
   min-height: 19.375rem;
 
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
+  margin-bottom: 1rem;
 
   border-radius: 6px 36px 6px 36px;
 
@@ -97,14 +98,16 @@ export const CardContainer = styled.div`
 
     color: ${props => props.theme['base-title']};
   }
-  .icon-cart {
+  button {
     display: flex;
     justify-content: center;
     align-items: center;
 
     padding: 0.5rem;
 
+    border: none;
     border-radius: 6px;
+    cursor: pointer;
 
     color: ${props => props.theme['base-card']};
     background-color: ${props => props.theme['purple-dark']};
