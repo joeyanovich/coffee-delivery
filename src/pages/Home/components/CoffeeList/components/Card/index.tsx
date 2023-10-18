@@ -1,6 +1,7 @@
 import { CardContainer } from "./styles";
 
 import  americano  from '../../../../../../../public/americano.png'
+import { ShoppingCart } from "phosphor-react";
 // import  arabe  from '../../../../../../../public/arabe.png'
 // import  cafeComLeite  from '../../../../../../../public/cafeComLeite.png'
 // import  cafeGelado  from '../../../../../../../public/cafeGelado.png'
@@ -22,11 +23,23 @@ export function Card() {
       <div className="tag">
         <span>TRADICIONAL</span>
       </div>
-      <h3>Expresso Tradicional</h3>
-      <span>O tradicional café feito com água quente e grãos moídos</span>
-      <footer>
-        <input type="number" />
-      </footer>
+      <div className="content">
+        <div className="text">
+          <h3>Expresso Tradicional</h3>
+          <p>O tradicional café feito com água quente e grãos moídos</p>
+        </div>
+        <footer>
+          <div className="price">
+            R$ <span>9,90</span>
+          </div>
+          <div className="input-number">
+            <input type="number" />
+            <div className="icon-cart">
+              <ShoppingCart size={22} weight="fill"/>
+            </div>
+          </div>
+        </footer>
+      </div>
     </CardContainer>
   )
 }

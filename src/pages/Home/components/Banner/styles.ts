@@ -4,11 +4,12 @@ import bg from '../../../../../public/bg-hero.png'
 
 export const BannerContainer = styled.main`
   width: 100vw;
-  height: 34rem;
+  min-height: 34rem;
 
   background-image: url(${ bg });
   background-position: center;
   background-size: cover; 
+
   .container {
     display: flex;
     align-items: center;
