@@ -1,9 +1,12 @@
+import { AddressInfo } from "./components/AddressInfo";
+import { CartSelector } from "./components/CartSelector";
 import { CheckoutContainer } from "./styles";
 
 export function Checkout() {
   return (
     <CheckoutContainer>
-      <h1>Checkout</h1>
+      <AddressInfo />
+      <CartSelector />
     </CheckoutContainer>
   )
 }

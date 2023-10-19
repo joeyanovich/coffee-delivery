@@ -111,5 +111,9 @@ export const CardContainer = styled.div`
 
     color: ${props => props.theme['base-card']};
     background-color: ${props => props.theme['purple-dark']};
+
+    &:hover {
+      background-color: ${props => props.theme['purple']};
+    }
   }
 `
