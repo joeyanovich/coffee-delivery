@@ -1,4 +1,4 @@
-import { CurrencyDollarSimple, MapPinLine } from "phosphor-react";
+import { CurrencyDollarSimple, MapPinLine, Bank, CreditCard, Money } from "phosphor-react";
 import { AddressInfoContainer } from "./styled";
 import { Form } from "./Form";
 import { PayButton } from "./PayButton";
@@ -31,7 +31,9 @@ export function AddressInfo() {
               </div>
             </div>
             <div className="buttons">
-              <PayButton />
+              <PayButton id="credito" icon={<CreditCard />} text="Cartão de Crédito"/>
+              <PayButton id="debito" icon={<Bank />} text="Cartão de Débito"/>
+              <PayButton id="dinheiro" icon={<Money />} text="Dinheiro"/>
             </div>
           </div>
       </div>

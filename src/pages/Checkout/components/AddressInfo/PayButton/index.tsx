@@ -1,31 +1,21 @@
-import { Bank, CreditCard, Money } from "phosphor-react";
-import { Geral, PayButtonContainer, PayInfocontainer } from "./styles";
+import { ReactNode } from "react";
+import { PayButtonContainer } from "./styles";
 
-export function PayButton() {
+interface PayButtonProps {
+  id: string;
+  icon: ReactNode;
+  text: string;
+  
+}
+
+export function PayButton({ id, icon, text }: PayButtonProps) {
   return (
-    <>
     <PayButtonContainer>
-      <input type="radio" name="payment" id="credito"/>
-      <label htmlFor="credito">
-        <CreditCard size={16} />
-        <p>Cartão de Crédito</p>
+      <input type="radio" name="payment" id={id}/>
+      <label htmlFor={id}>
+        {icon}
+        {text}
       </label>
     </PayButtonContainer>
-    <PayButtonContainer>
-      <input type="radio" name="payment" id="debito"/>
-      <label htmlFor="debito">
-        <CreditCard size={16} />
-        <p>Cartão de Débito</p>
-      </label>
-    </PayButtonContainer>
-    <PayButtonContainer>
-      <input type="radio" name="payment" id="dinheiro"/>
-      <label htmlFor="dinheiro">
-        <CreditCard size={16} />
-        <p>Dinheiro</p>
-      </label>
-    </PayButtonContainer>
-    </>
-    
   )
 }

@@ -25,6 +25,7 @@ export const PayButtonContainer = styled.div`
     background-color: ${props => props.theme['base-button']};
 
     svg {
+      font-size: 1rem;
       color: ${props => props.theme['purple']};
     }
   }
