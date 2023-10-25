@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const AddressInfoContainer = styled.div`
-  width: 100%;
-  margin-top: 2.5rem;
+  max-width: 100%;
 
   display: flex;
   flex-direction: column;
