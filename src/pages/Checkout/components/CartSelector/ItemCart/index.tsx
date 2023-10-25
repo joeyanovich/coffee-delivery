@@ -1,6 +1,6 @@
-import { Trash } from 'phosphor-react';
 import cafe from '../../../../../../public/americano.png'
 import { ItemCartContainer } from "./styled";
+import { InputCount } from '../../../../../components/InputCount';
 
 export function ItemCart() {
   return (
@@ -9,13 +9,7 @@ export function ItemCart() {
         <img className='img-coffee' src={cafe} />
         <div className="content">
           <span>Expresso Tradicional</span>
-          <div className="amount-coffee">
-            <div>quantidade</div>
-            <button>
-              <Trash size={16} />
-              Remover
-            </button>
-          </div>
+          <InputCount />
         </div>
       </div>
       <div className="price">

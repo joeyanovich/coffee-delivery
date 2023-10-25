@@ -24,7 +24,7 @@ export function CartSelector() {
             <span>R$ 33,20</span>
           </div>
         </div>
-        <button>Confirmar Pedido</button>
+        <button className="btn">Confirmar Pedido</button>
       </div>
     </CartSelectotContainer>
   )

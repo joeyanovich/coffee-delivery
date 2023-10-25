@@ -47,7 +47,7 @@ export const CartSelectotContainer = styled.div`
     font-size: 1.25rem;
     font-weight: bold;
   }
-  button {
+  .btn {
     width: 100%;
     padding: 0.75rem;
     cursor: pointer;
