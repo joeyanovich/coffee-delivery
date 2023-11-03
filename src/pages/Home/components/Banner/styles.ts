@@ -7,29 +7,41 @@ export const BannerContainer = styled.main`
 
   background-image: url(${ bg });
   background-position: center;
-  background-size: cover; 
+  background-size: cover;
+`
 
-  .container {
-    display: flex;
-    align-items: center;
-    gap: 3.5rem;
+export const BannerContent = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
 
-    margin: auto;
-    max-width: 70rem;
-    height: auto;
-    padding: 5.75rem 0;
+  margin: auto;
+  max-width: 70rem;
+  height: auto;
+  padding: 5.75rem 0;
+
+  @media  (max-width: 70rem) {
+    gap: 0;
+
+    margin: 0 1.5rem;
   }
-  .left{
-    width: 40.125rem;
+
+  @media (max-width: 50rem) {
+    padding: 0;
   }
-  .left h1{
+`
+
+export const LeftContainer = styled.div`
+  width: 40.125rem;
+
+  h1{
     font-family: 'Baloo 2', sans-serif;
     font-size: 3rem;
     font-weight: 900;
 
     color: ${props => props.theme['base-title']};
   }
-  .left h2 {
+  h2 {
     padding-top: 1rem;
     padding-bottom: 4.125rem;
 
@@ -38,47 +50,34 @@ export const BannerContainer = styled.main`
 
     color: ${props => props.theme['base-subtitle']};
   }
-  .info-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 1.25rem;
-  }
+
+  @media (max-width: 50rem) {
+    text-align: center;
+    padding: 0;
+    margin-top: 4rem;
+    width: 100%;
+}
+`
+
+export const BenefitsContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1.25rem;
 
   @media  (max-width: 70rem) {
-    .container{
-      gap: 0;
-
-      margin: 0 1.5rem;
-    }
-    .info-container{
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
   }
 
   @media (max-width: 50rem) {
     display: flex;
     justify-content: center;
-
-    min-height: 25rem;
-
-    .container {
-      padding: 0;
-    }
-    .left {
-      text-align: center;
-      padding: 0;
-      margin-top: 4rem;
-      width: 100%;
-    }
-    .right{
-      display: none;
-    }
-    .info-container{
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 `
-  
+
+export const RightContainer = styled.div`
+  @media (max-width: 50rem) {
+    display: none;
+  }
+`

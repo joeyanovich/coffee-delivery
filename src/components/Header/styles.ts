@@ -15,14 +15,18 @@ export const LocalizationInfo = styled.div`
   gap: 0.75rem;
 `
 
-const AlignPosition = styled.div`
+// const AlignPosition = styled.div`
+//   display: flex;
+//   align-items: center;
+
+//   padding: 0.5rem;
+// `
+
+export const CityContainer = styled.div`
   display: flex;
   align-items: center;
 
   padding: 0.5rem;
-`
-
-export const CityContainer = styled(AlignPosition)`
   gap: 0.25rem;
 
   border-radius: 6px;
@@ -62,7 +66,11 @@ export const CartContainer = styled.div`
   }
 `
 
-export const CartButton = styled(AlignPosition)`
+export const CartButton = styled.button`
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem;
   border-radius: 6px;
   border: none;
   cursor: pointer;
