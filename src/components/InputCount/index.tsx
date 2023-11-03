@@ -29,10 +29,10 @@ export function InputCount() {
         <Plus size={14} />
       </ButtonIcon>
       </InputCountContainer>
-      <RemoveButton>
+      {/* <RemoveButton>
         <Trash size={16} />
         Remover
-      </RemoveButton>
+      </RemoveButton> */}
     </QuantityContainer>
     
     

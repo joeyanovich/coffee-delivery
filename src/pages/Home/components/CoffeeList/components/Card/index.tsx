@@ -1,4 +1,5 @@
-import { CardContainer } from "./styles";
+import { InputCount } from "../../../../../../components/InputCount";
+import { AddToCartButton, CardContainer, CardText, CartCount, FooterContainer, PriceContainer, TagContainer } from "./styles";
 
 import { ShoppingCart } from "phosphor-react";
 
@@ -13,32 +14,27 @@ interface CardsProps {
 export function Card({ img, tag, title, description, price}: CardsProps) {
   return (
     <CardContainer>
-      <div className="img">
-        <img src={img} />
-      </div>
-      <div className="tag">
+      <img src={img} />
+      <TagContainer>
         {tag.map((tagItem, index) => (
           <span key={index}>{tagItem}</span>
         ))}
-        {/* <span>{tag}</span> */}
-      </div>
-      <div className="content">
-        <div className="text">
+      </TagContainer>
+        <CardText>
           <h3>{title}</h3>
           <p>{description}</p>
-        </div>
-        <footer>
-          <div className="price">
+        </CardText>
+        <FooterContainer>
+          <PriceContainer>
             R$ <span>{price}</span>
-          </div>
-          <div className="input-number">
-            <input type="number" />
-            <button className="icon-cart">
+          </PriceContainer>
+          <CartCount>
+            <InputCount />
+            <AddToCartButton>
               <ShoppingCart size={22} weight="fill"/>
-            </button>
-          </div>
-        </footer>
-      </div>
+            </AddToCartButton>
+          </CartCount>
+        </FooterContainer>
     </CardContainer>
   )
 }
