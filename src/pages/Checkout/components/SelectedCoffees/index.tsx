@@ -1,7 +1,7 @@
 import { ItemCart } from "./ItemCart";
 import { CartSelectotContainer } from "./styles";
 
-export function CartSelector() {
+export function SelectedCoffees() {
   return (
     <CartSelectotContainer>
       <h2>Complete seu pedido</h2>

@@ -1,9 +1,9 @@
 import { CurrencyDollarSimple, MapPinLine, Bank, CreditCard, Money } from "phosphor-react";
 import { AddressInfoContainer } from "./styled";
 import { Form } from "./Form";
-import { PayButton } from "./PayButton";
+import { PayButton } from "./PaymentMethodButton";
 
-export function AddressInfo() {
+export function CompleteTheOrder() {
   return (
     <AddressInfoContainer>
       <h2>Complete seu pedido</h2>

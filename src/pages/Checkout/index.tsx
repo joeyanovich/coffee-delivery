@@ -1,12 +1,13 @@
-import { AddressInfo } from "./components/AddressInfo";
-import { CartSelector } from "./components/CartSelector";
+
+import { CompleteTheOrder } from "./components/CompleteTheOrder";
+import { SelectedCoffees } from "./components/SelectedCoffees";
 import { CheckoutContainer } from "./styles";
 
 export function Checkout() {
   return (
     <CheckoutContainer>
-      <AddressInfo />
-      <CartSelector />
+      <CompleteTheOrder />
+      <SelectedCoffees />
     </CheckoutContainer>
   )
 }
