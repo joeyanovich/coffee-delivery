@@ -1,6 +1,6 @@
 import { BannerContainer, BannerContent, BenefitsContainer, LeftContainer, RightContainer } from "./styles";
 
-import { Info } from "./Info";
+import { Info } from "./components/Info";
 import imgHero from '../../../../../public/img-hero.png'
 
 import { ShoppingCart, Timer, Package, Coffee } from 'phosphor-react'
