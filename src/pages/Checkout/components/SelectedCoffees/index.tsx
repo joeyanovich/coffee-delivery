@@ -1,31 +1,37 @@
 import { ItemCart } from "./ItemCart";
-import { CartSelectotContainer } from "./styles";
+import { Coffees, ConfirmButton, ContentContainer, Delivery, LineContainer, PriceInfoContainer, SelectedCoffeesContainer, Total, TotalItems } from "./styles";
 
 export function SelectedCoffees() {
   return (
-    <CartSelectotContainer>
+    <SelectedCoffeesContainer>
       <h2>Complete seu pedido</h2>
-      <div className="container">
-        <div className="items-info">
+      <ContentContainer>
+        <Coffees>
           <ItemCart />
-          <div className="line" />
-        </div>
-        <div className="price-info">
-          <div className="items-total">
+          <LineContainer />
+        </Coffees>
+        <Coffees>
+          <ItemCart />
+          <LineContainer />
+        </Coffees>
+        <PriceInfoContainer>
+          <TotalItems>
             <p>Total de itens</p>
             <span>R$ 29,70</span>
-          </div>
-          <div className="delivery">
+          </TotalItems>
+          <Delivery>
             <p>Entrega</p>
             <span>R$ 3,50</span>
-          </div>
-          <div className="total">
+          </Delivery>
+          <Total>
             <p>Total</p>
             <span>R$ 33,20</span>
-          </div>
-        </div>
-        <button className="btn">Confirmar Pedido</button>
-      </div>
-    </CartSelectotContainer>
+          </Total>
+        </PriceInfoContainer>
+        <ConfirmButton>
+          Confirmar Pedido
+        </ConfirmButton>
+      </ContentContainer>
+    </SelectedCoffeesContainer>
   )
 }

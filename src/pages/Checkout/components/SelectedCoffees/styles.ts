@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
-export const CartSelectotContainer = styled.div`
+export const SelectedCoffeesContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 28rem;
+
+  max-width: 28rem;
 
   h2 {
     font-family: 'Baloo 2', sans-serif;
@@ -12,47 +13,73 @@ export const CartSelectotContainer = styled.div`
 
     color: ${props => props.theme['base-subtitle']};
   }
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
+`
 
-    padding: 2.5rem;
+export const ContentContainer = styled.div` // container
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
 
-    background-color: ${props => props.theme['base-card']};
-  }
-  .line {
-    width: 23rem;
-    height: 1px;
+  padding: 2.5rem;
+  border-radius: 6px 44px 6px 44px;
 
-    margin-top: 1.5rem;
+  background-color: ${props => props.theme['base-card']};
+`
 
-    background-color:${props => props.theme['base-button']};
-  }
-  .price-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  .items-total, .delivery, .total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .items-total p, .delivery p {
-    font-size: 0.875rem;
-  }
-  .total {
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  .btn {
-    width: 100%;
-    padding: 0.75rem;
-    cursor: pointer;
-    border-radius: none;
+export const LineContainer = styled.div`
+  width: 23rem;
+  height: 1px;
 
-    background-color: ${props => props.theme['yellow']};
+  margin-top: 1.5rem;
+
+  background-color:${props => props.theme['base-button']};
+`
+
+export const Coffees = styled.div`
+`
+
+export const PriceInfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+`
+const Format = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+export const TotalItems = styled(Format)`
+
+p {
+  font-size: 0.875rem;
+}
+`
+
+export const Delivery = styled(Format)`
+p {
+  font-size: 0.875rem;
+}
+`
+
+export const Total = styled(Format)`
+  font-size: 1.25rem;
+  font-weight: bold;
+`
+
+export const ConfirmButton = styled.button`
+  width: 100%;
+  padding: 0.75rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+
+  background-color: ${props => props.theme['yellow']};
+  color: ${props => props.theme['white']};
+
+  &:hover {
+    background-color: ${props => props.theme['yellow-dark']};
   }
 `

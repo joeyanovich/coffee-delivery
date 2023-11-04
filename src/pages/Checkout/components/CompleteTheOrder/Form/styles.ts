@@ -43,4 +43,9 @@ export const FormContainer = styled.form`
     grid-column-start: 1;
     grid-column-end: 2;
   }
+
+  @media (max-width: 43rem) {
+    display: flex;
+    flex-direction: column;
+  }
 `

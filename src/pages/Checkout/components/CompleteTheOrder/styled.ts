@@ -42,6 +42,7 @@ export const TitleContent = styled.div` //subtitle
   gap: 0.5rem;
 
   h5 {
+    font-size: 1rem;
     font-weight: 400;
 
     color: ${props => props.theme['base-subtitle']};
