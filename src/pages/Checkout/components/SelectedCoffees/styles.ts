@@ -5,8 +5,6 @@ export const SelectedCoffeesContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
 
-  max-width: 28rem;
-
   h2 {
     font-family: 'Baloo 2', sans-serif;
     font-size: 1.125rem;
@@ -15,16 +13,20 @@ export const SelectedCoffeesContainer = styled.div`
   }
 `
 
-export const ContentContainer = styled.div` // container
+export const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.5rem;
-
+  
+  max-width: 100%;
   padding: 2.5rem;
   border-radius: 6px 44px 6px 44px;
 
   background-color: ${props => props.theme['base-card']};
+`
+export const Coffees = styled.div`
+  max-width: 100%;
 `
 
 export const LineContainer = styled.div`
@@ -36,8 +38,7 @@ export const LineContainer = styled.div`
   background-color:${props => props.theme['base-button']};
 `
 
-export const Coffees = styled.div`
-`
+
 
 export const PriceInfoContainer = styled.div`
   display: flex;

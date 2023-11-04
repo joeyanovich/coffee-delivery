@@ -4,7 +4,7 @@ import { Coffees, ConfirmButton, ContentContainer, Delivery, LineContainer, Pric
 export function SelectedCoffees() {
   return (
     <SelectedCoffeesContainer>
-      <h2>Complete seu pedido</h2>
+      <h2>Cafés selecionados</h2>
       <ContentContainer>
         <Coffees>
           <ItemCart />
