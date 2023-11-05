@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
 
     -webkit-font-smoothing: antialiased;
 
-    margin-bottom: 1000px;
+    /* margin-bottom: 1000px; */
 
   }
 

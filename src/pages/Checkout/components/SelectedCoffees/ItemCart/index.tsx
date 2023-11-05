@@ -1,6 +1,7 @@
 import cafe from '../../../../../../public/americano.png'
-import { ContentContainer, InfoCardNameAndQuantity, ItemCartContainer, Price } from "./styled";
+import { AddAndRemove, ContentContainer, InfoCardNameAndQuantity, ItemCartContainer, Price, RemoveButton } from "./styled";
 import { InputCount } from '../../../../../components/InputCount';
+import { Trash } from 'phosphor-react';
 
 export function ItemCart() {
   return (
@@ -9,7 +10,13 @@ export function ItemCart() {
         <img src={cafe} />
         <InfoCardNameAndQuantity>
           <span>Expresso Tradicional</span>
-          <InputCount size='small' />
+          <AddAndRemove>
+            <InputCount size='small' />
+            <RemoveButton>
+              <Trash size={16} />
+              Remover
+            </RemoveButton>
+          </AddAndRemove>
         </InfoCardNameAndQuantity>
       </ContentContainer>
       <Price>

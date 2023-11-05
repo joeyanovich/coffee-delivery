@@ -54,35 +54,3 @@ export const AmountQuantity = styled.div`
   justify-content: center;
   width: 1.25rem;
 `
-
-export const RemoveButton = styled.button`
-  display: flex;
-  gap: 0.25rem;
-  align-items: center;
-
-  padding: 0.5rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  transition: 0.3s ease-in-out;
-
-  background-color: ${props => props.theme['base-button']};
-
-  svg {
-    transition: 0.3s ease-in-out;
-
-    color: ${props => props.theme['purple']};
-  }
-
-  &:hover {
-    background-color: ${props => props.theme['base-hover']};
-    color: ${props => props.theme['text-subtitle']};
-
-    svg {
-      color: ${props => props.theme['purple-dark']};
-    }
-  }
-`
