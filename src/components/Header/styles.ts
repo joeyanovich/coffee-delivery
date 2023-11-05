@@ -44,7 +44,11 @@ export const CityContainer = styled.div`
 export const CartContainer = styled.div`
   position: relative;
   cursor: pointer;
-
+  
+  &:hover span {
+    background-color: ${props => props.theme['yellow-light']};
+    color: ${props => props.theme['yellow-dark']};
+  }
   span {
     position: absolute;
     top: -0.625rem;
@@ -60,6 +64,7 @@ export const CartContainer = styled.div`
     height: 1.25rem;
 
     border-radius: 50%;
+    transition: 0.3s ease-in-out;
 
     background-color: ${props => props.theme['yellow-dark']};
     color: ${props => props.theme['white']};
@@ -74,7 +79,13 @@ export const CartButton = styled.button`
   border-radius: 6px;
   border: none;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 
   background-color: ${props => props.theme['yellow-light']};
   color: ${props => props.theme['yellow-dark']};
+
+  &:hover {
+    background-color: ${props => props.theme['yellow-dark']};
+    color: ${props => props.theme['yellow-light']};
+  }
 `
