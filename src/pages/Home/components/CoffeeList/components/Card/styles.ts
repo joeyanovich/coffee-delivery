@@ -105,6 +105,7 @@ export const AddToCartButton = styled.button`
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 
   color: ${props => props.theme['base-card']};
   background-color: ${props => props.theme['purple-dark']};

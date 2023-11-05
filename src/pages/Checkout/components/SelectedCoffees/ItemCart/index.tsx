@@ -9,7 +9,7 @@ export function ItemCart() {
         <img src={cafe} />
         <InfoCardNameAndQuantity>
           <span>Expresso Tradicional</span>
-          <InputCount />
+          <InputCount size='small' />
         </InfoCardNameAndQuantity>
       </ContentContainer>
       <Price>

@@ -2,7 +2,11 @@ import { Minus, Plus, Trash } from "phosphor-react";
 import { AmountQuantity, ButtonIcon, InputCountContainer, QuantityContainer, RemoveButton } from "./styles";
 import { useState } from "react";
 
-export function InputCount() {
+interface InputCountProps {
+  size?: 'small' | 'large'
+}
+
+export function InputCount({ size = 'small' }: InputCountProps) {
   const [number, setNumber] = useState(1)
 
   const handleIncrement = () => {
@@ -19,13 +23,13 @@ export function InputCount() {
   return (
     <QuantityContainer>
       <InputCountContainer>
-      <ButtonIcon onClick={handleDecrement}>
+      <ButtonIcon size={size} onClick={handleDecrement}>
         <Minus size={14} />
       </ButtonIcon>
       <AmountQuantity>
         {number}
       </AmountQuantity>
-      <ButtonIcon onClick={handleIncrement}>
+      <ButtonIcon size={size} onClick={handleIncrement}>
         <Plus size={14} />
       </ButtonIcon>
       </InputCountContainer>

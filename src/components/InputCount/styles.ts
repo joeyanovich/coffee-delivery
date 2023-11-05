@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface ButtonProps {
+  size: 'small' | 'large'
+}
+
 export const QuantityContainer = styled.div`
   display: flex;
   align-items: center;
@@ -12,20 +16,23 @@ export const InputCountContainer = styled.div`
   gap: 0.25rem;
 
   border-radius: 6px;
-  /* padding: 0.5rem 0.375rem; */
 
   background-color: ${props => props.theme['base-button']};
 
 `
 
-export const ButtonIcon = styled.div`
+export const ButtonIcon = styled.div<ButtonProps>`
+
 display: flex;
 align-items: center;
 justify-content: center;
 
 border-radius: 6px;
 cursor: pointer;
-padding: 0.5625rem 0.25rem 0.5625rem 0.25rem;
+/* padding: 1rem 0.25rem; */
+/* padding: 0.75rem 0.25rem; */
+padding: ${props => props.size === 'small' ? '0.5625rem 0.25rem 0.5625rem 0.25rem' : '0.75rem 0.25rem'};
+
 
 transition: 0.3s ease-in-out;
 

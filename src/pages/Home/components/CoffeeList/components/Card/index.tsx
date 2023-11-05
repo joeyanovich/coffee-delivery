@@ -29,7 +29,7 @@ export function Card({ img, tag, title, description, price}: CardsProps) {
             R$ <span>{price}</span>
           </PriceContainer>
           <CartCount>
-            <InputCount />
+            <InputCount size="large" />
             <AddToCartButton>
               <ShoppingCart size={22} weight="fill"/>
             </AddToCartButton>
