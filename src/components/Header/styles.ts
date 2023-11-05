@@ -46,8 +46,8 @@ export const CartContainer = styled.div`
   cursor: pointer;
   
   &:hover span {
-    background-color: ${props => props.theme['purple']};
-    color: ${props => props.theme['purple-light']};
+    background-color: ${props => props.theme['purple-light']};
+    color: ${props => props.theme['purple']};
   }
   span {
     position: absolute;
@@ -85,7 +85,7 @@ export const CartButton = styled.button`
   color: ${props => props.theme['yellow-dark']};
 
   &:hover {
-    background-color: ${props => props.theme['purple-light']};
-    color: ${props => props.theme['purple']};
+    background-color: ${props => props.theme['purple']};
+    color: ${props => props.theme['purple-light']};
   }
 `
