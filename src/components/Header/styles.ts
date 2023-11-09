@@ -1,9 +1,24 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
-  width: 100%;
+  width: 100vw;
   height: 6.5rem;
 
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: ${props => props.theme['background']};
+`
+export const HeaderContent = styled.div`
+  width: 70rem;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
