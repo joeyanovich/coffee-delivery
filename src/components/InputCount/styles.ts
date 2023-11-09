@@ -21,13 +21,13 @@ export const InputCountContainer = styled.div`
 
 `
 
-export const ButtonIcon = styled.div<ButtonProps>`
-
+export const ButtonIcon = styled.button<ButtonProps>`
 display: flex;
 align-items: center;
 justify-content: center;
 
 border-radius: 6px;
+border: none;
 cursor: pointer;
 /* padding: 1rem 0.25rem; */
 /* padding: 0.75rem 0.25rem; */
@@ -35,6 +35,8 @@ padding: ${props => props.size === 'small' ? '0.5625rem 0.25rem 0.5625rem 0.25re
 
 
 transition: 0.3s ease-in-out;
+
+background-color: transparent;
 
 svg {
   transition: 0.3s ease-in-out;
@@ -48,9 +50,14 @@ svg {
 }
 `
 
-export const AmountQuantity = styled.div`
+export const AmountQuantity = styled.input`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 1.25rem;
+
+  text-align: center;
+  border: none;
+
+  background-color: transparent;
 `

@@ -3,9 +3,12 @@ import logo from '../../../public/logo-coffee-delivery.svg'
 
 import { CartButton, CartContainer, CityContainer, HeaderContainer, LocalizationInfo } from "./styles";
 import { NavLink } from 'react-router-dom'
+import { useCart } from '../../hooks/useCart';
 
 
 export function Header() {
+  const { cartQuantity } = useCart()
+ 
   return (
     <HeaderContainer>
       <NavLink to='/'>
@@ -21,7 +24,8 @@ export function Header() {
             <CartButton>
               <ShoppingCart size={22} weight="fill" />
             </CartButton>
-            <span>3</span>
+            {cartQuantity >= 1 && <span>{cartQuantity}</span>}
+            {/* <span>3</span> */}
           </CartContainer>          
         </NavLink>
       </LocalizationInfo>

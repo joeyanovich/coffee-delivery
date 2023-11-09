@@ -25,4 +25,14 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 1rem;
     line-height: 1.3;
   }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 `

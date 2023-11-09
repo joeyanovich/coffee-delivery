@@ -1,9 +1,11 @@
+import { useContext, useState } from 'react'
 import { InputCount } from "../../../../../../components/InputCount";
 import { AddToCartButton, CardContainer, CardText, CartCount, FooterContainer, PriceContainer, TagContainer } from "./styles";
 
 import { ShoppingCart } from "phosphor-react";
+import { CartContext } from '../../../../../../contexts/CartContext';
 
-export interface Coffees {
+export interface Coffee {
   id: number
   img: string
   tag: string[]
@@ -13,10 +15,33 @@ export interface Coffees {
 
 }
 interface CardsProps {
-  coffee: Coffees
+  coffee: Coffee
 }
 
 export function Card({ coffee }: CardsProps) {
+  const [quantity, setQuantity] = useState(1)
+  const {AddCoffeeToCart} = useContext(CartContext)
+
+  function handleDecrement() {
+    if (quantity > 1) {
+      setQuantity(state => state + 1)
+    }
+  }
+
+  function handleIncrement() {
+    setQuantity(state => state + 1)
+  }
+
+  
+
+  function handleAddToCart() {
+    const coffeeToAdd= {
+      ...coffee,
+      quantity
+    }
+    AddCoffeeToCart(coffeeToAdd)
+  }
+
   return (
     <CardContainer>
       <img src={coffee.img} />
@@ -34,8 +59,13 @@ export function Card({ coffee }: CardsProps) {
             R$ <span>{coffee.price}</span>
           </PriceContainer>
           <CartCount>
-            <InputCount size="large" />
-            <AddToCartButton>
+            <InputCount
+              size="large"
+              onDecrement={handleDecrement}
+              onIncrement={handleIncrement}
+              quantity={quantity}
+            />
+            <AddToCartButton onClick={handleAddToCart}>
               <ShoppingCart size={22} weight="fill"/>
             </AddToCartButton>
           </CartCount>
