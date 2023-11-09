@@ -23,6 +23,7 @@ export function CoffeeList() {
       <CardsList>
         <Card
         coffee={{
+          id: 1,
           img: tradicional,
           tag:["TRADICIONAL"],
           title:"Expresso Tradicional",
@@ -32,6 +33,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 2,
           img: americano,
           tag:["TRADICIONAL"],
           title:"Expresso Americano",
@@ -41,6 +43,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 3,
           img: cremoso,
           tag:["TRADICIONAL"],
           title:"Expresso Cremoso",
@@ -50,6 +53,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 4,
           img: cafeGelado,
           tag:["TRADICIONAL", "GELADO"],
           title:"Expresso Gelado",
@@ -59,6 +63,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 5,
           img: cafeComLeite,
           tag:["TRADICIONAL", "COM LEITE"],
           title:"Café com Leite",
@@ -68,6 +73,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 6,
           img: latte,
           tag:["TRADICIONAL", "COM LEITE"],
           title:"Latte",
@@ -77,6 +83,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 7,
           img: capuccino,
           tag:["TRADICIONAL", "COM LEITE"],
           title:"Capuccino",
@@ -86,6 +93,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 8,
           img: macchiato,
           tag:["TRADICIONAL", "COM LEITE"],
           title:"Macchiato",
@@ -95,6 +103,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 9,
           img: mocaccino,
           tag:["TRADICIONAL", "COM LEITE"],
           title:"Mocaccino",
@@ -104,6 +113,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 10,
           img: chocolateQuente,
           tag:["ESPECIAL", "COM LEITE"],
           title:"Chocolate Quente",
@@ -113,6 +123,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 11,
           img: cubano,
           tag:["ESPECIAL", "ALCOÓLICO", "GELADO"],
           title:"Cubano",
@@ -122,6 +133,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 12,
           img: havaiano,
           tag:["ESPECIAL"],
           title:"Havaiano",
@@ -131,6 +143,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 13,
           img: arabe,
           tag:["ESPECIAL"],
           title:"Árabe",
@@ -140,6 +153,7 @@ export function CoffeeList() {
         />
         <Card
         coffee={{
+          id: 14,
           img: irlandes,
           tag:["ESPECIAL", "ALCOÓLICO"],
           title:"Irlandês",

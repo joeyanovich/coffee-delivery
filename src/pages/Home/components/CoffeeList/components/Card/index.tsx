@@ -4,6 +4,7 @@ import { AddToCartButton, CardContainer, CardText, CartCount, FooterContainer, P
 import { ShoppingCart } from "phosphor-react";
 
 export interface Coffees {
+  id: number
   img: string
   tag: string[]
   title: string
