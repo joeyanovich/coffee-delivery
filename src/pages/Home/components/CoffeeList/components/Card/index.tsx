@@ -3,30 +3,34 @@ import { AddToCartButton, CardContainer, CardText, CartCount, FooterContainer, P
 
 import { ShoppingCart } from "phosphor-react";
 
-interface CardsProps {
+export interface Coffees {
   img: string
   tag: string[]
   title: string
   description: string
   price: string
+
+}
+interface CardsProps {
+  coffee: Coffees
 }
 
-export function Card({ img, tag, title, description, price}: CardsProps) {
+export function Card({ coffee }: CardsProps) {
   return (
     <CardContainer>
-      <img src={img} />
+      <img src={coffee.img} />
       <TagContainer>
-        {tag.map((tagItem, index) => (
+        {coffee.tag.map((tagItem, index) => (
           <span key={index}>{tagItem}</span>
         ))}
       </TagContainer>
         <CardText>
-          <h3>{title}</h3>
-          <p>{description}</p>
+          <h3>{coffee.title}</h3>
+          <p>{coffee.description}</p>
         </CardText>
         <FooterContainer>
           <PriceContainer>
-            R$ <span>{price}</span>
+            R$ <span>{coffee.price}</span>
           </PriceContainer>
           <CartCount>
             <InputCount size="large" />

@@ -2,6 +2,8 @@ import { useState } from "react";
 import { FormContainer } from "./styles";
 
 export function Form() {
+
+
   const [cep, setCep] = useState("");
   const [rua, setRua] = useState("");
   const [numero, setNumero] = useState("");
@@ -10,8 +12,9 @@ export function Form() {
   const [cidade, setCidade] = useState("");
   const [uf, setUf] = useState("");
 
+
   return (
-    <FormContainer>
+    <FormContainer >
         <input
           className={cep ? "filled" : ""}
           type="text"

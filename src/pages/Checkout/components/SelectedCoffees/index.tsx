@@ -2,6 +2,7 @@ import { ItemCart } from "./ItemCart";
 import { Coffees, ConfirmButton, ContentContainer, Delivery, LineContainer, PriceInfoContainer, SelectedCoffeesContainer, Total, TotalItems } from "./styles";
 
 export function SelectedCoffees() {
+
   return (
     <SelectedCoffeesContainer>
       <h2>Cafés selecionados</h2>
