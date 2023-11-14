@@ -1,20 +1,25 @@
+import { useCart } from "../../../../hooks/useCart";
 import { ItemCart } from "./ItemCart";
 import { Coffees, ConfirmButton, ContentContainer, Delivery, LineContainer, PriceInfoContainer, SelectedCoffeesContainer, Total, TotalItems } from "./styles";
 
-export function SelectedCoffees() {
+export function SelectedCoffees() { 
+  const { cartItems } = useCart()
 
   return (
     <SelectedCoffeesContainer>
       <h2>Cafés selecionados</h2>
       <ContentContainer>
-        <Coffees>
+        {cartItems.map((item) => (
+          <ItemCart key={item.id} />
+        ))}
+        {/* <Coffees>
           <ItemCart />
           <LineContainer />
         </Coffees>
         <Coffees>
           <ItemCart />
           <LineContainer />
-        </Coffees>
+        </Coffees> */}
         <PriceInfoContainer>
           <TotalItems>
             <p>Total de itens</p>
