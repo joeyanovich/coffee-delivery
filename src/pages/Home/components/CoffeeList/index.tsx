@@ -1,27 +1,32 @@
 import { Card } from "./components/Card";
 import { CardsList, CoffeeListContainer } from "./styles";
 
-import  americano  from '../../../../../public/americano.png'
-import  arabe  from '../../../../../public/arabe.png'
-import  cafeComLeite  from '../../../../../public/cafe-com-leite.png'
-import  cafeGelado  from '../../../../../public/cafe-gelado.png'
-import  capuccino  from '../../../../../public/capuccino.png'
-import  chocolateQuente  from '../../../../../public/chocolate-quente.png'
-import  cremoso  from '../../../../../public/expresso-cremoso.png'
-import  cubano  from '../../../../../public/cubano.png'
-import  havaiano  from '../../../../../public/havaiano.png'
-import  irlandes  from '../../../../../public/irlandes.png'
-import  latte  from '../../../../../public/latte.png'
-import  macchiato  from '../../../../../public/macchiato.png'
-import  mocaccino  from '../../../../../public/mocaccino.png'
-import  tradicional  from '../../../../../public/tradicional.png'
+// import  americano  from '../../../../../public/coffees/americano.png'
+// import  arabe  from '../../../../../public/coffees/arabe.png'
+// import  cafeComLeite  from '../../../../../public/coffees/cafe-com-leite.png'
+// import  cafeGelado  from '../../../../../public/coffees/cafe-gelado.png'
+// import  capuccino  from '../../../../../public/coffees/capuccino.png'
+// import  chocolateQuente  from '../../../../../public/coffees/chocolate-quente.png'
+// import  cremoso  from '../../../../../public/coffees/expresso-cremoso.png'
+// import  cubano  from '../../../../../public/coffees/cubano.png'
+// import  havaiano  from '../../../../../public/coffees/havaiano.png'
+// import  irlandes  from '../../../../../public/coffees/irlandes.png'
+// import  latte  from '../../../../../public/coffees/latte.png'
+// import  macchiato  from '../../../../../public/coffees/macchiato.png'
+// import  mocaccino  from '../../../../../public/coffees/mocaccino.png'
+// import  tradicional  from '../../../../../public/coffees/tradicional.png'
+import { coffees } from "../../../../data/coffees";
 
 export function CoffeeList() {
   return (
     <CoffeeListContainer>
       <h2>Nossos cafés</h2>
       <CardsList>
-        <Card
+        {coffees.map((coffee) => (
+          <Card key={coffee.id} coffee={coffee} />
+        ))}
+        {/* <Card /> */}
+        {/* <Card
         coffee={{
           id: 1,
           img: tradicional,
@@ -160,7 +165,12 @@ export function CoffeeList() {
           description:"Bebida a base de café, uísque irlandês, açúcar e chantilly",
           price:"9,90",
         }}
-        />
+        /> */}
+        {/* <CoffeeList>
+        {coffees.map((coffee) => (
+          <CoffeeCard key={coffee.id} coffee={coffee} />
+        ))}
+      </CoffeeList> */}
       </CardsList>
     </CoffeeListContainer>
   )

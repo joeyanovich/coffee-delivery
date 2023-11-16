@@ -17,7 +17,7 @@ export const coffees = [
   },
   {
     id: 3,
-    img: "epresso-cremoso.png",
+    img: "expresso-cremoso.png",
     tag:["TRADICIONAL"],
     title:"Expresso Cremoso",
     description:"Café expresso tradicional com espuma cremosa",

@@ -1,4 +1,4 @@
-import cafe from '../../../../../../public/americano.png'
+import cafe from '../../../../../../public/coffees/americano.png'
 import { AddAndRemove, ContentContainer, InfoCardNameAndQuantity, ItemCartContainer, Price, RemoveButton } from "./styled";
 import { InputCount } from '../../../../../components/InputCount';
 import { Trash } from 'phosphor-react';
@@ -20,7 +20,7 @@ export function ItemCart({ coffe }: ItemCardProps) {
   return (
     <ItemCartContainer>
       <ContentContainer>
-        <img src={} />
+        <img src={cafe} />
         <InfoCardNameAndQuantity>
           <span>Expresso Tradicional</span>
           <AddAndRemove>

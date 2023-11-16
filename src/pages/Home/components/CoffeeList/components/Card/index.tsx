@@ -44,7 +44,7 @@ export function Card({ coffee }: CardsProps) {
 
   return (
     <CardContainer>
-      <img src={coffee.img} />
+      <img src={`/coffees/${coffee.img}`} />
       <TagContainer>
         {coffee.tag.map((tagItem, index) => (
           <span key={index}>{tagItem}</span>
