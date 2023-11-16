@@ -24,7 +24,7 @@ export function Card({ coffee }: CardsProps) {
 
   function handleDecrement() {
     if (quantity > 1) {
-      setQuantity(state => state + 1)
+      setQuantity(state => state - 1)
     }
   }
 

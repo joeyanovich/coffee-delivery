@@ -10,7 +10,7 @@ export function SelectedCoffees() {
       <h2>Cafés selecionados</h2>
       <ContentContainer>
         {cartItems.map((item) => (
-          <ItemCart key={item.id} />
+          <ItemCart  key={item.id} />
         ))}
         {/* <Coffees>
           <ItemCart />

@@ -8,6 +8,9 @@ export const ItemCartContainer = styled.div`
   justify-content: space-between;
 
   background-color: ${props => props.theme['base-card']};
+
+  border-bottom: 1px solid ${props => props.theme['base-button']};
+  padding-bottom: 1.5rem;
 `
 
 export const ContentContainer = styled.div`

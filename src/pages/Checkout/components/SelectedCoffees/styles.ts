@@ -29,14 +29,14 @@ export const Coffees = styled.div`
   max-width: 100%;
 `
 
-export const LineContainer = styled.div`
-  width: 23rem;
-  height: 1px;
+// export const LineContainer = styled.div`
+//   width: 23rem;
+//   height: 1px;
 
-  margin-top: 1.5rem;
+//   margin-top: 1.5rem;
 
-  background-color:${props => props.theme['base-button']};
-`
+//   background-color:${props => props.theme['base-button']};
+// `
 
 
 
