@@ -11,7 +11,7 @@ export interface Coffee {
   tag: string[]
   title: string
   description: string
-  price: string
+  price: number
 
 }
 interface CardsProps {
@@ -31,8 +31,6 @@ export function Card({ coffee }: CardsProps) {
   function handleIncrement() {
     setQuantity(state => state + 1)
   }
-
-  
 
   function handleAddToCart() {
     const coffeeToAdd= {

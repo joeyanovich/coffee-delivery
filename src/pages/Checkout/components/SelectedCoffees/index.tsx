@@ -1,3 +1,4 @@
+import { coffees } from "../../../../data/coffees";
 import { useCart } from "../../../../hooks/useCart";
 import { ItemCart } from "./ItemCart";
 import { Coffees, ConfirmButton, ContentContainer, Delivery, LineContainer, PriceInfoContainer, SelectedCoffeesContainer, Total, TotalItems } from "./styles";
@@ -10,7 +11,7 @@ export function SelectedCoffees() {
       <h2>Cafés selecionados</h2>
       <ContentContainer>
         {cartItems.map((item) => (
-          <ItemCart  key={item.id} />
+          <ItemCart  key={item.id} coffee={item}/>
         ))}
         {/* <Coffees>
           <ItemCart />
