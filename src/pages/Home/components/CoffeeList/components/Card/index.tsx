@@ -4,6 +4,7 @@ import { AddToCartButton, CardContainer, CardText, CartCount, FooterContainer, P
 
 import { ShoppingCart } from "phosphor-react";
 import { CartContext } from '../../../../../../contexts/CartContext';
+import { formatMoney } from '../../../../../../utils/formatMoney';
 
 export interface Coffee {
   id: number
@@ -21,6 +22,8 @@ interface CardsProps {
 export function Card({ coffee }: CardsProps) {
   const [quantity, setQuantity] = useState(1)
   const {AddCoffeeToCart} = useContext(CartContext)
+
+  const formatedPrice = formatMoney(coffee.price)
 
   function handleDecrement() {
     if (quantity > 1) {
@@ -54,7 +57,7 @@ export function Card({ coffee }: CardsProps) {
         </CardText>
         <FooterContainer>
           <PriceContainer>
-            R$ <span>{coffee.price}</span>
+            R$ <span>{formatedPrice}</span>
           </PriceContainer>
           <CartCount>
             <InputCount

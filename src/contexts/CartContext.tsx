@@ -9,7 +9,8 @@ export interface CartItem extends Coffee {
 interface CartContextType {
   cartItems: CartItem[]
   cartQuantity: number
-  AddCoffeeToCart: (coffee: CartItem) => void;
+  AddCoffeeToCart: (coffee: CartItem) => void
+  changeCartItemQuantity: (cartItemId: number, type: "increment" | "decrement") => void
 }
 
 interface CartContextProviderProps {
@@ -39,10 +40,24 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     setCartItems(newCart)
   }
 
-  console.log(cartItems)
+  // console.log(cartItems)
+
+  function changeCartItemQuantity(cartItemId: number, type: "increment" | "decrement") {
+    const newCart = produce(cartItems, (draft) => {
+      const coffeeExistsInCart = cartItems.findIndex(cartItem => cartItem.id === cartItemId)
+
+      if (coffeeExistsInCart >= 0) {
+        const item = draft[coffeeExistsInCart]
+        draft[coffeeExistsInCart].quantity =
+          type === "increment" ? item.quantity + 1 : item.quantity - 1
+      }
+    })
+
+    setCartItems(newCart)
+  }
 
   return (
-    <CartContext.Provider value={{ cartItems, cartQuantity, AddCoffeeToCart }}>
+    <CartContext.Provider value={{ cartItems, cartQuantity, AddCoffeeToCart, changeCartItemQuantity }}>
       {children}
     </CartContext.Provider>
   )
