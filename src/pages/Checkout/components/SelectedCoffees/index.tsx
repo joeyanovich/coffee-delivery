@@ -1,9 +1,17 @@
 import { useCart } from "../../../../hooks/useCart";
+import { formatMoney } from "../../../../utils/formatMoney";
 import { ItemCart } from "./ItemCart";
 import { ConfirmButton, ContentContainer, Delivery, PriceInfoContainer, SelectedCoffeesContainer, Total, TotalItems } from "./styles";
 
+const DELIVERY_PRICE = 3.5
+
 export function SelectedCoffees() { 
-  const { cartItems } = useCart()
+  const { cartItems, cartItemsTotal, cartQuantity } = useCart()
+  const cartTotal = DELIVERY_PRICE + cartItemsTotal
+
+  const formatedItemsTotal = formatMoney(cartItemsTotal)
+  const formatDeliveryPrice = formatMoney(DELIVERY_PRICE)
+  const formatedCartTotal = formatMoney(cartTotal)
 
   return (
     <SelectedCoffeesContainer>
@@ -15,18 +23,18 @@ export function SelectedCoffees() {
         <PriceInfoContainer>
           <TotalItems>
             <p>Total de itens</p>
-            <span>R$ 29,70</span>
+            <span>R$ {formatedItemsTotal}</span>
           </TotalItems>
           <Delivery>
             <p>Entrega</p>
-            <span>R$ 3,50</span>
+            <span>R$ {formatDeliveryPrice}</span>
           </Delivery>
           <Total>
             <p>Total</p>
-            <span>R$ 33,20</span>
+            <span>R$ {formatedCartTotal}</span>
           </Total>
         </PriceInfoContainer>
-        <ConfirmButton>
+        <ConfirmButton disabled={cartQuantity <= 0}>
           Confirmar Pedido
         </ConfirmButton>
       </ContentContainer>
