@@ -9,7 +9,10 @@ interface LocationType {
 
 export function InfoDelivery() {
   // const { state } = useLocation as unknown as LocationType;
-  const { state } = useLocation<LocationType>();
+  // const { state } = useLocation<LocationType>();
+
+  const location = useLocation() as LocationType;
+  const { state } = location;
 
   const navigate = useNavigate();
 
