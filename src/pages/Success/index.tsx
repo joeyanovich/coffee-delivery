@@ -3,7 +3,9 @@ import delivery from '../../../public/img-delivery.svg'
 import { OrderConfirmed } from "./components/OrderConfirmed";
 import { LeftSideContainer, RightSideContainer, SuccessContainer } from "./styles";
 
+
 export function Success() {
+
   return (
     <SuccessContainer>
       <LeftSideContainer>

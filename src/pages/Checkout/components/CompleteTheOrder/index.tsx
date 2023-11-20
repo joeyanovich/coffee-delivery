@@ -39,7 +39,7 @@ export function CompleteTheOrder() {
               <PaymentMethodInput
                 id="credit"
                 key="credit"
-                value="credit" 
+                value="Cartão de Crédito" 
                 icon={<CreditCard />}
                 text="Cartão de Crédito"
                 {...register('paymentMethod')}
@@ -47,7 +47,7 @@ export function CompleteTheOrder() {
               <PaymentMethodInput
                 id="debit"
                 key="debit"
-                value="debit"
+                value="Cartão de Débito"
                 icon={<Bank />}
                 text="Cartão de Débito"
                 {...register('paymentMethod')}
@@ -55,7 +55,7 @@ export function CompleteTheOrder() {
               <PaymentMethodInput
                 id="money"
                 key="money"
-                value="money"
+                value="Dinheiro"
                 icon={<Money />}
                 text="Dinheiro"
                 {...register('paymentMethod')}
