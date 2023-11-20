@@ -70,4 +70,9 @@ export const PaymentMethodContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 0.75rem;
+
+  > p {
+        font-size: 0.75rem;
+        color: ${props => props.theme['base-error']};
+  }
 `

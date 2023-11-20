@@ -1,9 +1,14 @@
 import { CurrencyDollarSimple, MapPinLine, Bank, CreditCard, Money } from "phosphor-react";
 import { AddressContainer, LeftContainer, LeftContentContainer, PaymentContainer, PaymentMethodContainer, TitleContent } from "./styled";
 import { Form } from "./Form";
-import { PayButton } from "./PaymentMethodButton";
+import { PaymentMethodInput } from "./PaymentMethodButton";
+import { useFormContext } from "react-hook-form";
 
 export function CompleteTheOrder() {
+  const { register, formState: { errors } } = useFormContext();
+
+  const paymentMethodError = errors?.paymentMethod?.message as unknown as string
+
   return (
     <LeftContainer>
       <h2>Complete seu pedido</h2>
@@ -31,9 +36,31 @@ export function CompleteTheOrder() {
               </div>
             </TitleContent>
             <PaymentMethodContainer>
-              <PayButton id="credito" icon={<CreditCard />} text="Cartão de Crédito"/>
-              <PayButton id="debito" icon={<Bank />} text="Cartão de Débito"/>
-              <PayButton id="dinheiro" icon={<Money />} text="Dinheiro"/>
+              <PaymentMethodInput
+                id="credit"
+                key="credit"
+                value="credit" 
+                icon={<CreditCard />}
+                text="Cartão de Crédito"
+                {...register('paymentMethod')}
+              />
+              <PaymentMethodInput
+                id="debit"
+                key="debit"
+                value="debit"
+                icon={<Bank />}
+                text="Cartão de Débito"
+                {...register('paymentMethod')}
+              />
+              <PaymentMethodInput
+                id="money"
+                key="money"
+                value="money"
+                icon={<Money />}
+                text="Dinheiro"
+                {...register('paymentMethod')}
+              />
+              {paymentMethodError && <p>{paymentMethodError}</p>}
             </PaymentMethodContainer>
           </PaymentContainer>
       </LeftContentContainer>
