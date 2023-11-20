@@ -5,7 +5,6 @@ interface PayButtonProps {
   id: string;
   icon: ReactNode;
   text: string;
-  
 }
 
 export function PayButton({ id, icon, text }: PayButtonProps) {

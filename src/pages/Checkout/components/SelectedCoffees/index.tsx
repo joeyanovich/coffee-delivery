@@ -34,7 +34,7 @@ export function SelectedCoffees() {
             <span>R$ {formatedCartTotal}</span>
           </Total>
         </PriceInfoContainer>
-        <ConfirmButton disabled={cartQuantity <= 0}>
+        <ConfirmButton disabled={cartQuantity <= 0} type="submit" >
           Confirmar Pedido
         </ConfirmButton>
       </ContentContainer>

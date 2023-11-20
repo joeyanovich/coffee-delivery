@@ -18,4 +18,5 @@ export const defaultTheme = {
   'base-text': '#574F4D',
   'base-subtitle': '#403937',
   'base-title': '#272221',
+  'base-error': '#E82525',
 }
